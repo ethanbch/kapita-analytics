@@ -97,6 +97,7 @@ nav ul {
   justify-content: center;
   gap: 3rem;
   margin: 0 2rem;
+  list-style: none; /* Ajout de cette ligne pour enlever les points */
 }
 
 nav a {
@@ -382,6 +383,11 @@ footer {
   }
 }
 
+/* Cache le bouton hamburger par défaut */
+.menu-toggle {
+  display: none; /* Le bouton est caché par défaut */
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   header {
@@ -437,7 +443,7 @@ footer {
     display: none; /* Cache le bouton CTA sur mobile */
   }
 
-  /* Ajout d'un bouton hamburger */
+  /* Affiche le bouton hamburger uniquement sur mobile */
   .menu-toggle {
     display: block;
     background: none;
@@ -446,7 +452,7 @@ footer {
     font-size: 1.5rem;
     cursor: pointer;
     padding: 0.5rem;
-    z-index: 1001; /* Pour rester au-dessus du menu mobile */
+    z-index: 1001;
   }
 
   /* Ajustement du contenu principal pour éviter qu'il soit caché sous le header */
