@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Les enjeux de l'inflation en 2024 | Kapita Analytics</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="icon" type="image/jpeg" href="../logo/logo.jpeg" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="../index.html" class="brand-name">Kapita Analytics</a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="../articles.html">Articles</a></li>
+          <li><a href="../etudes.html">Études</a></li>
+          <li><a href="../newsletter.html">Newsletter</a></li>
+        </ul>
+      </nav>
+      <a href="../articles.html" class="cta-button">
+        <i class="fas fa-chart-line"></i> Explorer les analyses
+      </a>
+    </header>
+
+    <main class="article-page">
+      <button class="brief-button" onclick="showArticleBrief()">
+        <i class="fas fa-lightbulb"></i> En bref
+      </button>
+      <article>
+        <div class="article-header">
+          <div class="article-meta-top">
+            <div class="meta-info">
+              <div class="meta-left">
+                <span class="category-tag">Macroéconomie</span>
+                <span class="date">
+                  <i class="far fa-calendar-alt"></i> 15 janvier 2024
+                </span>
+              </div>
+            </div>
+          </div>
+          <h1>Les enjeux de l'inflation en 2024</h1>
+          <p class="article-description">
+            Une analyse approfondie des impacts de l'inflation sur l'économie
+            mondiale et les solutions envisagées.
+          </p>
+        </div>
+
+        <div class="article-hero">
+          <img
+            src="https://images.unsplash.com/photo-1618044619888-009e412ff12a?w=1600"
+            alt="Illustration inflation"
+            class="featured-image"
+          />
+        </div>
+
+        <div class="article-content">
+          <div class="article-intro">
+            <p>
+              L'inflation continue d'impacter l'économie mondiale en 2024. Avec
+              une hausse des prix qui touche particulièrement l'alimentation et
+              l'énergie, les banques centrales font face à des défis majeurs.
+            </p>
+          </div>
+
+          <div class="article-section">
+            <h2>Les causes de l'inflation actuelle</h2>
+            <p>Détail des causes et analyses...</p>
+          </div>
+
+          <div class="article-section">
+            <h2>Impact sur le pouvoir d'achat</h2>
+            <p>Analyse des conséquences...</p>
+          </div>
+
+          <div class="article-section">
+            <h2>Perspectives pour 2024</h2>
+            <p>Prévisions et scénarios possibles...</p>
+          </div>
+        </div>
+
+        <div class="article-footer">
+          <div class="share-buttons">
+            <span>Partager :</span>
+            <a href="#" class="share-button"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="share-button"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <script>
+      function showArticleBrief() {
+        const modal = document.createElement("div");
+        modal.className = "brief-modal";
+        modal.innerHTML = `
+          <div class="brief-content">
+            <div class="brief-header">
+              <h3>Les enjeux de l'inflation en 2024</h3>
+              <button class="close-brief">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+            <ul class="brief-points">
+              <li>L'inflation reste un défi majeur en 2024 avec des taux supérieurs aux objectifs des banques centrales</li>
+              <li>Les secteurs de l'alimentation et de l'énergie sont les plus touchés par la hausse des prix</li>
+              <li>Les banques centrales maintiennent des politiques monétaires restrictives pour contrôler l'inflation</li>
+              <li>Impact significatif sur le pouvoir d'achat des ménages et les marges des entreprises</li>
+              <li>Perspectives de normalisation progressive mais incertitudes persistantes</li>
+            </ul>
+          </div>
+        `;
+
+        document.body.appendChild(modal);
+        setTimeout(() => modal.classList.add("show-modal"), 10);
+
+        const closeBtn = modal.querySelector(".close-brief");
+        closeBtn.addEventListener("click", () => {
+          modal.classList.remove("show-modal");
+          setTimeout(() => modal.remove(), 300);
+        });
+
+        modal.addEventListener("click", (e) => {
+          if (e.target === modal) {
+            modal.classList.remove("show-modal");
+            setTimeout(() => modal.remove(), 300);
+          }
+        });
+      }
+    </script>
+
+    <footer>
+      <!-- Footer existant -->
+    </footer>
+  </body>
+</html>

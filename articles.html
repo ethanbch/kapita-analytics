@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Articles | Kapita Analytics</title>
+    <link rel="icon" type="image/jpeg" href="logo/logo.jpeg" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html" class="brand-name">Kapita Analytics</a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="articles.html" class="active">Articles</a></li>
+          <li><a href="etudes.html">Études</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+        </ul>
+      </nav>
+      <a href="articles.html" class="cta-button">
+        <i class="fas fa-chart-line"></i> Explorer les analyses
+      </a>
+    </header>
+
+    <main>
+      <div class="articles-hero">
+        <h1>Explorez nos analyses économiques</h1>
+        <p>Des articles approfondis pour comprendre l'économie d'aujourd'hui</p>
+      </div>
+
+      <div class="articles-container">
+        <div class="articles-filters">
+          <div class="filter-group">
+            <button class="filter-button active">
+              <i class="fas fa-globe"></i> Tous
+            </button>
+            <button class="filter-button">
+              <i class="fas fa-chart-line"></i> Macroéconomie
+            </button>
+            <button class="filter-button">
+              <i class="fas fa-coins"></i> Finance
+            </button>
+            <button class="filter-button">
+              <i class="fas fa-piggy-bank"></i> Finance personnelle
+            </button>
+          </div>
+          <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Rechercher un article..." />
+          </div>
+        </div>
+
+        <div class="articles-grid" id="articles-container">
+          <!-- Les articles seront chargés dynamiquement via JavaScript -->
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <!-- Footer existant -->
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>

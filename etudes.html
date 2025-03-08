@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Études Approfondies | Kapita Analytics</title>
+    <link rel="icon" type="image/jpeg" href="logo/logo.jpeg" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html" class="brand-name">Kapita Analytics</a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="etudes.html" class="active">Études</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+        </ul>
+      </nav>
+      <a href="etudes.html" class="cta-button">
+        <i class="fas fa-book"></i> Découvrir nos études
+      </a>
+    </header>
+
+    <main>
+      <div class="studies-hero">
+        <h1>Analyses Économiques Approfondies</h1>
+        <p>
+          Des études détaillées pour les professionnels et passionnés d'économie
+        </p>
+      </div>
+
+      <div class="articles-container">
+        <div class="articles-filters">
+          <div class="filter-group">
+            <button class="filter-button active">
+              <i class="fas fa-globe"></i> Toutes les études
+            </button>
+            <button class="filter-button">
+              <i class="fas fa-chart-bar"></i> Analyses Sectorielles
+            </button>
+            <button class="filter-button">
+              <i class="fas fa-landmark"></i> Politiques Économiques
+            </button>
+            <button class="filter-button">
+              <i class="fas fa-industry"></i> Études de Marché
+            </button>
+          </div>
+          <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Rechercher une étude..." />
+          </div>
+        </div>
+
+        <div class="articles-grid" id="studies-container">
+          <!-- Les études seront chargées dynamiquement via JavaScript -->
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <!-- Footer existant -->
+    </footer>
+    <script src="js/studies.js"></script>
+  </body>
+</html>

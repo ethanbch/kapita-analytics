@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Newsletter | Kapita Analytics</title>
+    <link rel="icon" type="image/jpeg" href="logo/logo.jpeg" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html" class="brand-name">Kapita Analytics</a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="etudes.html">Études</a></li>
+          <li><a href="newsletter.html" class="active">Newsletter</a></li>
+        </ul>
+      </nav>
+      <a href="newsletter.html" class="cta-button">
+        <i class="fas fa-envelope"></i> S'abonner
+      </a>
+    </header>
+
+    <main>
+      <div class="newsletter-hero">
+        <h1>Restez informé de l'actualité économique</h1>
+        <p>Recevez nos analyses et études directement dans votre boîte mail</p>
+      </div>
+
+      <div class="newsletter-container">
+        <div class="newsletter-benefits">
+          <h2>Pourquoi s'abonner ?</h2>
+          <ul>
+            <li>
+              <i class="fas fa-check"></i> Analyses hebdomadaires exclusives
+            </li>
+            <li>
+              <i class="fas fa-check"></i> Accès prioritaire aux nouvelles
+              études
+            </li>
+            <li><i class="fas fa-check"></i> Contenus premium sélectionnés</li>
+            <li>
+              <i class="fas fa-check"></i> Invitation aux webinaires d'experts
+            </li>
+          </ul>
+        </div>
+
+        <form id="newsletter-form" class="newsletter-form">
+          <div class="form-group">
+            <label for="name">Prénom</label>
+            <input type="text" id="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" required />
+          </div>
+          <div class="form-group">
+            <label>
+              <input type="checkbox" required />
+              J'accepte de recevoir la newsletter de Kapita Analytics
+            </label>
+          </div>
+          <button type="submit" class="primary-button">
+            <i class="fas fa-paper-plane"></i> S'abonner à la newsletter
+          </button>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <!-- Footer existant -->
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
