@@ -385,9 +385,14 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
   header {
-    flex-direction: column;
-    text-align: center;
-    padding: 0.8rem 1rem; /* Réduction du padding */
+    flex-direction: row; /* Changé de column à row */
+    justify-content: space-between; /* Pour espacer le logo et le menu */
+    align-items: center;
+    padding: 0.8rem 1rem;
+  }
+
+  .logo {
+    z-index: 1001; /* Pour rester au-dessus du menu mobile */
   }
 
   .brand-name {
@@ -396,19 +401,20 @@ footer {
 
   nav {
     position: fixed;
-    top: 60px; /* Hauteur du header */
+    top: 0; /* Changé de 60px à 0 */
     left: 0;
     right: 0;
+    height: 100vh; /* Pleine hauteur */
     background: var(--bg-color);
-    padding: 0.5rem;
-    transform: translateY(-100%);
+    padding: 4rem 1rem 1rem; /* Padding top augmenté pour laisser de la place au logo */
+    transform: translateX(100%); /* Change la direction de l'animation */
     transition: transform 0.3s ease;
-    z-index: 999;
+    z-index: 1000;
     border-bottom: 1px solid var(--gray-light);
   }
 
   nav.active {
-    transform: translateY(0);
+    transform: translateX(0);
   }
 
   nav ul {
@@ -440,6 +446,7 @@ footer {
     font-size: 1.5rem;
     cursor: pointer;
     padding: 0.5rem;
+    z-index: 1001; /* Pour rester au-dessus du menu mobile */
   }
 
   /* Ajustement du contenu principal pour éviter qu'il soit caché sous le header */
@@ -458,6 +465,10 @@ footer {
 
   .banner p {
     font-size: 1rem;
+  }
+
+  .newsletter {
+    display: none; /* Cache complètement la section newsletter sur mobile */
   }
 }
 
