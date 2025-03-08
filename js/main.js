@@ -1,4 +1,16 @@
+function addVersionToCSS() {
+  const timestamp = new Date().getTime();
+  document.querySelectorAll('link[rel="stylesheet"]').forEach((link) => {
+    if (link.href.includes("style.css")) {
+      const cleanHref = link.href.split("?")[0];
+      link.href = `${cleanHref}?v=${timestamp}`;
+    }
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+  addVersionToCSS();
+
   // Force le rechargement du CSS
   const styleSheets = document.querySelectorAll('link[rel="stylesheet"]');
   styleSheets.forEach((styleSheet) => {
