@@ -1,4 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Force le rechargement du CSS
+  const styleSheets = document.querySelectorAll('link[rel="stylesheet"]');
+  styleSheets.forEach((styleSheet) => {
+    if (styleSheet.href.includes("style.css")) {
+      const newHref =
+        styleSheet.href.split("?")[0] + "?v=" + new Date().getTime();
+      styleSheet.href = newHref;
+    }
+  });
+
   // Gestion du formulaire newsletter
   const newsletterForm = document.getElementById("newsletter-form");
   if (newsletterForm) {
