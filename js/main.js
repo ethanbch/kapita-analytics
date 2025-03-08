@@ -76,6 +76,41 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// Gestion du menu mobile
+document.addEventListener("DOMContentLoaded", function () {
+  const header = document.querySelector("header");
+  const nav = document.querySelector("nav");
+
+  // Création du bouton hamburger
+  const menuToggle = document.createElement("button");
+  menuToggle.className = "menu-toggle";
+  menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+  header.insertBefore(menuToggle, nav);
+
+  menuToggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+    menuToggle.innerHTML = nav.classList.contains("active")
+      ? '<i class="fas fa-times"></i>'
+      : '<i class="fas fa-bars"></i>';
+  });
+
+  // Ferme le menu quand on clique sur un lien
+  nav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("active");
+      menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+    });
+  });
+
+  // Ferme le menu quand on scroll
+  window.addEventListener("scroll", () => {
+    if (nav.classList.contains("active")) {
+      nav.classList.remove("active");
+      menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+    }
+  });
+});
+
 const API_URL = "http://localhost:3000/api";
 
 async function handleNewsletterSubmit(e) {
