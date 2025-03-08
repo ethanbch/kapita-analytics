@@ -37,7 +37,6 @@ function loadStudies() {
       image:
         "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800",
       category: "Analyses Sectorielles",
-      isPremium: true,
     },
     {
       title: "Politique Monétaire BCE : Bilan et Perspectives",
@@ -45,8 +44,7 @@ function loadStudies() {
       excerpt:
         "Étude détaillée des décisions de la BCE et de leurs implications pour la zone euro. Analyse des taux directeurs, des programmes de rachat d'actifs et des perspectives pour 2024-2025.",
       image: "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=800",
-      category: "Politiques Économiques",
-      isPremium: true,
+      category: "Pol. Éco",
     },
     {
       title: "Le Marché Immobilier Européen en 2024",
@@ -55,7 +53,6 @@ function loadStudies() {
         "Analyse complète du marché immobilier européen : tendances des prix, impact des taux d'intérêt, nouvelles réglementations et prévisions par pays et segments de marché.",
       image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800",
       category: "Études de Marché",
-      isPremium: false,
     },
     {
       title: "Transition Énergétique : Impacts Économiques",
@@ -65,7 +62,6 @@ function loadStudies() {
       image:
         "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800",
       category: "Analyses Sectorielles",
-      isPremium: true,
     },
     {
       title: "Commerce International : Nouvelles Routes de la Soie",
@@ -74,8 +70,7 @@ function loadStudies() {
         "Décryptage des enjeux économiques et géopolitiques des nouvelles routes de la soie. Impact sur les échanges commerciaux et les relations internationales.",
       image:
         "https://images.unsplash.com/photo-1494412519320-aa613dfb7738?w=800",
-      category: "Politiques Économiques",
-      isPremium: false,
+      category: "Pol. Eco",
     },
     {
       title: "L'Industrie du Luxe : Perspectives 2024-2025",
@@ -85,7 +80,6 @@ function loadStudies() {
       image:
         "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800",
       category: "Études de Marché",
-      isPremium: true,
     },
   ];
 
@@ -105,11 +99,6 @@ function createStudyCard(study) {
       <div class="article-image">
         <img src="${study.image}" alt="${study.title}" loading="lazy">
         <span class="category-tag">${study.category}</span>
-        ${
-          study.isPremium
-            ? '<span class="premium-tag"><i class="fas fa-star"></i> Premium</span>'
-            : ""
-        }
         <button class="brief-button" data-title="${study.title}">
           <i class="fas fa-lightbulb"></i> En bref !
         </button>
