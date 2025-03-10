@@ -193,34 +193,15 @@ async function handleNewsletterSubmit(e) {
 function loadArticles() {
   const articles = [
     {
-      title: "Les enjeux de l'inflation en 2024",
-      date: "15 janvier 2024",
+      title:
+        "Éco en bref du 10/03/2025 - Défense Européenne, Tensions et Opportunités",
+      date: "10 mars 2025",
       excerpt:
-        "L'inflation continue d'impacter l'économie mondiale en 2024. Avec une hausse des prix qui touche particulièrement l'alimentation et l'énergie, les banques centrales font face à des défis majeurs. Découvrez notre analyse complète des causes, conséquences et perspectives...",
+        "Une journée marquée par l'incertitude des marchés et les initiatives européennes en matière de défense, sur fond de tensions commerciales persistantes. Analyse des impacts sur les marchés financiers et perspectives économiques...",
       image:
-        "https://images.unsplash.com/photo-1618044619888-009e412ff12a?w=800",
-      category: "Macroéconomie",
-      url: "articles/inflation-2024.html",
-    },
-    {
-      title: "Bitcoin : L'année de tous les records ?",
-      date: "12 janvier 2024",
-      excerpt:
-        "Alors que le Bitcoin atteint de nouveaux sommets, le marché des cryptomonnaies attire de plus en plus d'investisseurs institutionnels. Entre adoption massive et régulation croissante, 2024 pourrait être une année charnière pour les actifs numériques...",
-      image:
-        "https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=800",
-      category: "Finance",
-      url: "articles/bitcoin-2024.html",
-    },
-    {
-      title: "Guide pratique : Optimiser son épargne en période d'inflation",
-      date: "10 janvier 2024",
-      excerpt:
-        "Face à la hausse des taux d'intérêt, quelles sont les meilleures options pour faire fructifier son épargne ? De l'immobilier aux marchés boursiers, découvrez nos conseils pour protéger et faire croître votre patrimoine en 2024...",
-      image:
-        "https://images.unsplash.com/photo-1579621970589-a6652767393b?w=800",
-      category: "Finance personnelle",
-      url: "articles/guide-epargne-2024.html",
+        "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=1600",
+      category: "Éco en bref",
+      url: "articles/actus-10032025.html",
     },
   ];
 
@@ -304,15 +285,29 @@ function showBrief(article) {
 }
 
 function generateBriefPoints(article) {
-  // Exemple de points clés (à personnaliser selon vos besoins)
-  const points = [
+  if (article.url === "articles/actus-10032025.html") {
+    // Points spécifiques pour l'article d'actualité du 10/03/2025
+    return [
+      "Marchés en baisse : Dow Jones -2,08%, Nasdaq -4,00%, S&P 500 -2,70%",
+      "Relations USA-Mexique : Suspension des taxes douanières de 25% sur les exportations mexicaines",
+      "Secteur tech fortement impacté : Tesla -15,43%, Meta -4,42%, Apple -4,85%",
+      "Goldman Sachs révise ses prévisions : PIB à 1,7% (vs 2,2%), risque de récession à 20%",
+      "Europe : Initiative d'augmentation des dépenses de défense, notamment en Allemagne",
+      "À suivre : Données d'inflation US, indicateurs chinois, réunion Eurogroupe",
+    ]
+      .map((point) => `<li>${point}</li>`)
+      .join("");
+  }
+
+  // Pour les autres articles, utiliser les points génériques
+  return [
     "Point clé 1 de l'article",
     "Point clé 2 avec plus de détails",
     "Point clé 3 sur les implications",
     "Conclusion principale",
-  ];
-
-  return points.map((point) => `<li>${point}</li>`).join("");
+  ]
+    .map((point) => `<li>${point}</li>`)
+    .join("");
 }
 
 function filterArticlesBySearch(searchTerm) {
